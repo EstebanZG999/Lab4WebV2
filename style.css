@@ -18,6 +18,17 @@ body{
     margin-right: auto;
 
 }
+/*.cape::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #333;
+}*/
 .shoulder{
     background-color: black;
     position: relative;
@@ -136,3 +147,56 @@ body{
     transform: scaleY(-1); 
     z-index: 2;
 }
+.mouth{
+    background-color: black;
+    position: relative;
+    height: 0.5px;
+    width: 90px;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: -125px;
+    z-index: 2;
+}
+.batman div.eye1,
+.batman div.eye2 {
+    filter: brightness(85%);
+}
+.eye1, .eye2 {
+    transition: transform 0.5s ease;
+}
+.eye1:hover, .eye2:hover {
+    transform: scale(1.1); 
+}
+.eye1, .eye2 {
+    animation: blink 4s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.neck + .neck2 {
+    margin-top: -220;
+}
+.ear1 ~ .eye1 {
+    opacity: 0.8; 
+}
+.cape {
+    background-color: black; 
+    transition: background-color 0.5s ease; 
+}
+
+.cape:hover {
+    background-color: rgb(27, 1, 71); 
+}
+.batman > div:first-child {
+    border-top: 5px solid black; 
+}
+.batman > div:last-child {
+    border-bottom: 5px solid black; 
+}
+
+.batman > div:nth-child(9) {
+    background-color: white;
+}
+
